@@ -49,7 +49,7 @@ function visSange() {
   sange.forEach((sang) => {
     if (filter == sang.kategori || filter == "alle") {
       const klon = template.cloneNode(true).content;
-      klon.querySelector(".billede").src = "????/" + sang.Billede + ".png";
+      klon.querySelector(".billede").src = "billeder/" + sang.Billede + ".png";
       klon.querySelector(".sang").textContent = sang.Sang;
       klon.querySelector(".kunstner").textContent = sang.Kunstner;
       klon.querySelector(".genre").textContent = sang.Genre;
@@ -65,7 +65,7 @@ function visEnkelSang(sang) {
   console.log(sang);
 
   singleView.style.display = "block";
-  singleView.querySelector("img").src = "/" + sang.Billede + ".png";
+  singleView.querySelector("img").src = "billeder/" + sang.Billede + ".png";
   singleView.querySelector("h2").textContent = sang.Sang;
   singleView.querySelector(".kunstner").textContent = sang.Kunstner;
   singleView.querySelector(".fact").textContent = sang.Fact;

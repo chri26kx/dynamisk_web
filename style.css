@@ -10,7 +10,8 @@ img {
 #firstsection {
   width: 100%;
   height: 100vh;
-  background-image: url(splash.jpg);
+  background-image: url(splash.svg);
+  background-color: #26272e;
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(8, 1fr);

@@ -77,7 +77,8 @@ header {
   background-color: #232427;
   display: flex;
   justify-content: space-between;
-  padding-inline: 2%;
+  padding: 2%;
+  padding-right: 15%;
   align-items: center;
 }
 
@@ -85,21 +86,53 @@ a {
   text-decoration: none;
   font-family: "Bai Jamjuree", sans-serif;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 nav a {
   border: solid 1.5px #00a7ff;
-  border-radius: 10%;
+  padding-inline: 50%;
+  padding-block: 5%;
 }
-
+/* -------- hover - knap ----------- */
+nav a:hover {
+  background-color: #00a7ff;
+  padding-inline: 50%;
+  padding-block: 5%;
+}
 .logo img {
   width: 25%;
 }
 
 @media (min-width: 600px) {
+  header {
+    background-color: #232427;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2%;
+    padding-right: 10%;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: "Bai Jamjuree", sans-serif;
+    color: white;
+    font-size: 1rem;
+  }
+
+  nav a {
+    border: solid 1.5px #00a7ff;
+    padding-inline: 60%;
+    padding-block: 5%;
+  }
+  nav a :hover {
+    background-color: #00a7ff;
+    padding-inline: 60%;
+    padding-block: 5%;
+  }
   .logo img {
-    width: 10%;
+    width: 13%;
   }
 
   a {
@@ -122,6 +155,54 @@ section {
   display: flex;
   flex-flow: wrap;
   gap: 50px;
+}
+
+h2 {
+  text-align: center;
+  padding-block: 10%;
+}
+.side2 nav {
+  display: flex;
+  flex-flow: wrap;
+  gap: 20px;
+  text-align: center;
+  padding-inline: 5%;
+  margin-bottom: 5%;
+}
+button {
+  background-color: #26272e;
+  /* border: #00a7ff solid 1px; */
+  border: none;
+  color: white;
+}
+.valgt {
+  background-color: #26272e;
+  color: #00a7ff;
+  border: #00a7ff solid 1px;
+  padding: 3%;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #00a7ff;
+}
+@media (min-width: 600px) {
+  .side2 nav {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    /* padding-inline: 5%; */
+    margin-bottom: 5%;
+  }
+  .valgt {
+    background-color: #26272e;
+    color: #00a7ff;
+    border: #00a7ff solid 1px;
+    padding: 2%;
+    text-decoration: none;
+  }
 }
 
 /* ------------------------------------------ popup ------------------------------------------- */

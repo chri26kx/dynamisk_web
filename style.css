@@ -6,3 +6,27 @@
 img {
   max-width: 100%;
 }
+
+header {
+  background-color: #232427;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2%;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo img {
+  width: 10%;
+}
+
+html {
+  background-color: #26272e;
+}
+
+.forside html {
+  background-color: #232427;
+}

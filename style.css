@@ -1,3 +1,5 @@
+/* ------------------------------------------ fælles ------------------------------------------- */
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -6,6 +8,70 @@
 img {
   max-width: 100%;
 }
+
+h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 3.5rem;
+  color: white;
+}
+
+h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 2.8rem;
+  color: white;
+}
+
+h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+h4 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.7rem;
+  color: white;
+}
+
+p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-family: "Teko", sans-serif;
+    font-size: 6rem;
+    color: white;
+  }
+
+  h2 {
+    font-family: "Teko", sans-serif;
+    font-size: 4rem;
+    color: white;
+  }
+
+  h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 3rem;
+    color: white;
+  }
+
+  h4 {
+    font-family: "Teko", sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+
+  p {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+/* ------------------------------------------ header ------------------------------------------- */
 
 header {
   background-color: #232427;
@@ -17,16 +83,45 @@ header {
 
 a {
   text-decoration: none;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+nav a {
+  border: solid 1.5px #00a7ff;
+  border-radius: 10%;
 }
 
 .logo img {
-  width: 10%;
+  width: 25%;
 }
 
-html {
+@media (min-width: 600px) {
+  .logo img {
+    width: 10%;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------------------------ forside ------------------------------------------- */
+html .forside {
+  background-color: #232427;
+}
+
+/* ------------------------------------------ side 2 ------------------------------------------- */
+
+html .side2 {
   background-color: #26272e;
 }
 
-.forside html {
+/* ------------------------------------------ popup ------------------------------------------- */
+
+/* #popup {
   background-color: #232427;
-}
+} */
+
+/* ------------------------------------------ footer ------------------------------------------- */

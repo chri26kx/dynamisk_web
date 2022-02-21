@@ -26,14 +26,33 @@ img {
 
 .splash button {
   margin-top: 20px;
-  padding: 10px;
   background-color: #26272e;
   border-color: turquoise;
   color: turquoise;
   border-radius: 5px;
+  width: 150px;
+  height: 45px;
 }
 
 .splash h1 {
   font-family: Teko;
   font-size: 5rem;
+}
+
+h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+h4 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.7rem;
+  color: white;
+}
+
+p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1rem;
+  color: white;
 }

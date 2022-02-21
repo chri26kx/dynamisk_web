@@ -172,6 +172,11 @@ html .forside {
   height: 45px;
 }
 
+.splash h1 {
+  font-family: Teko;
+  font-size: 5rem;
+}
+
 /* ------------------------------------------ side 2 ------------------------------------------- */
 
 html .side2 {

@@ -193,9 +193,9 @@ hr {
   margin-block: 5%;
 }
 
-section {
+/* section {
   margin-inline: 5%;
-}
+} */
 
 article {
   background-color: #232427;
@@ -253,7 +253,7 @@ button:hover {
     text-decoration: none;
   }
 
-  section {
+  #container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -270,14 +270,25 @@ button:hover {
 
 #singleView {
   display: none;
-  background-color: #232427;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  background-color: #eff3ff56;
+  overflow: scroll;
 }
 
-.luk {
-  display: none;
+#singleView article {
+  width: 80vh;
+  margin: 4rem auto;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #232427;
+  border: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* ------------------------------------------ footer ------------------------------------------- */

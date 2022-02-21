@@ -159,22 +159,27 @@ html .forside {
 .splash {
   color: white;
   grid-column: 2/6;
-  grid-row: 3/4;
+  grid-row: 1;
 }
-
-.splash button {
-  margin-top: 20px;
-  background-color: #26272e;
-  border-color: turquoise;
-  color: turquoise;
-  border-radius: 5px;
-  width: 150px;
-  height: 45px;
-}
-
 .splash h1 {
   font-family: Teko;
   font-size: 5rem;
+}
+
+.splash p {
+  margin-bottom: 30px;
+}
+
+.splash a {
+  border: solid 1.5px #00a7ff;
+  padding-inline: 5%;
+  padding-block: 2%;
+  font-size: 1.5rem;
+}
+.splash a:hover {
+  background-color: #00a7ff;
+  padding-inline: 5%;
+  padding-block: 2%;
 }
 
 /* ------------------------------------------ side 2 ------------------------------------------- */

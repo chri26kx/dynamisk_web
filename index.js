@@ -73,8 +73,7 @@ function visEnkelSang(sang) {
   singleView.querySelector(".fact").textContent = sang.Fact;
   singleView.style.display = "block";
 }
-singleView.addEventListener("click", () => (singleView.style.display = "none"));
 
-// document
-//   .querySelector(".luk")
-//   .addEventListener("click", () => (singleView.style.display = "none"));
+document
+  .querySelector(".luk")
+  .addEventListener("click", () => (singleView.style.display = "none"));

@@ -68,6 +68,9 @@ function visEnkelSang(sang) {
     "billeder/" + sang.Billede + ".png";
   singleView.querySelector(".sang").textContent = sang.Sang;
   singleView.querySelector(".kunstner").textContent = sang.Kunstner;
+
+  singleView.querySelector(".link").src = sang.Link;
+
   // singleView.querySelector(".udgivelsesår").textContent = sang.Udgivelses år;
   singleView.querySelector(".genre").textContent = sang.Genre;
   singleView.querySelector(".fact").textContent = sang.Fact;

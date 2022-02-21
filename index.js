@@ -64,6 +64,7 @@ const singleView = document.querySelector("#singleView");
 function visEnkelSang(sang) {
   console.log(sang);
 
+  singleView.style.display = "block";
   singleView.querySelector(".billede").src =
     "billeder/" + sang.Billede + ".png";
   singleView.querySelector(".sang").textContent = sang.Sang;
@@ -71,10 +72,7 @@ function visEnkelSang(sang) {
   // singleView.querySelector(".udgivelsesår").textContent = sang.Udgivelses år;
   singleView.querySelector(".genre").textContent = sang.Genre;
   singleView.querySelector(".fact").textContent = sang.Fact;
-  singleView.style.display = "block";
 }
-singleView.addEventListener("click", () => (singleView.style.display = "none"));
-
-// document
-//   .querySelector(".luk")
-//   .addEventListener("click", () => (singleView.style.display = "none"));
+document
+  .querySelector(".luk")
+  .addEventListener("click", () => (singleView.style.display = "none"));

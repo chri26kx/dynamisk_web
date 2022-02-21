@@ -23,13 +23,13 @@ h2 {
 
 h3 {
   font-family: "Teko", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 h4 {
   font-family: "Teko", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -200,6 +200,23 @@ article {
   box-shadow: #00a7ff;
 }
 
+/* article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  gap: 10px;
+  background-color: #232427;
+  margin-bottom: 5%;
+  padding-inline: 2%;
+  padding-bottom: 5%;
+  box-shadow: #00a7ff;
+}
+
+article img {
+  width: 100%;
+} */
+
 h2 {
   text-align: center;
   padding-block: 10%;
@@ -259,6 +276,10 @@ button:hover {
   article {
     padding-inline: 5%;
   }
+
+  article .billede {
+    padding-top: 5%;
+  }
 }
 
 /* ------------------------------------------ popup ------------------------------------------- */
@@ -275,15 +296,96 @@ button:hover {
 }
 
 #singleView article {
-  width: 80vh;
-  margin: 4rem auto;
+  width: 45vh;
+  height: 60vh;
+  margin: 7rem auto;
   border-radius: 4px;
   padding: 12px;
   background-color: #232427;
   border: 2px solid black;
-
   display: flex;
   flex-direction: column;
+}
+
+#singleView img {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5%;
+}
+#singleView h3 {
+  padding-bottom: 5%;
+}
+#singleView p {
+  padding-bottom: 2%;
+}
+
+#singleView .fact {
+  padding-top: 5%;
+}
+.luk {
+  color: white;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.luk:hover {
+  color: #00a7ff;
+}
+@media (min-width: 600px) {
+  #singleView article {
+    width: 150vh;
+    height: 100vh;
+    margin: 4rem auto;
+    border-radius: 4px;
+    padding: 12px;
+    background-color: #232427;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #singleView .luk {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #singleView .billede {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    /* object-fit: cover; */
+    width: 70%;
+    padding: 0%;
+  }
+
+  #singleView .sang {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #singleView .kunstner {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  #singleView .genre {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  #singleView .udgivelsesår {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+
+  #singleView .fact {
+    grid-column: 1/3;
+    grid-row: 6/7;
+    padding-inline: 8%;
+  }
+
+  /* #singleView img {
+    width: 20%;
+    margin-left: 0;
+    margin-right: 0;
+  } */
 }
 
 /* ------------------------------------------ footer ------------------------------------------- */

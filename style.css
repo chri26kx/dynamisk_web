@@ -231,13 +231,13 @@ button:hover {
 
 /* ------------------------------------------ popup ------------------------------------------- */
 
-/* #singleView {
+#singleView {
   display: none;
   background-color: #232427;
   width: 100vw;
   height: 100vh;
   position: fixed;
-} */
+}
 
 .luk {
   display: none;

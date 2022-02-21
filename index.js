@@ -47,12 +47,12 @@ function visSange() {
   container.textContent = "";
 
   sange.forEach((sang) => {
-    if (filter == sang.kategori || filter == "alle") {
+    if (filter == sang.Genre || filter == "alle") {
       const klon = template.cloneNode(true).content;
-      klon.querySelector(".billede").src = "????/" + sang.billednavn + ".png";
-      klon.querySelector(".sang").textContent = sang.sang;
-      klon.querySelector(".kunstner").textContent = sang.kunstner;
-      klon.querySelector(".genre").textContent = sang.genre;
+      klon.querySelector(".billede").src = "billeder/" + sang.Billede + ".png";
+      klon.querySelector(".sang").textContent = sang.Sang;
+      klon.querySelector(".kunstner").textContent = sang.Kunstner;
+      klon.querySelector(".genre").textContent = sang.Genre;
       klon
         .querySelector("article")
         .addEventListener("click", () => visEnkelSang(sang));
@@ -60,17 +60,21 @@ function visSange() {
     }
   });
 }
-
+const singleView = document.querySelector("#singleView");
 function visEnkelSang(sang) {
   console.log(sang);
 
+  singleView.querySelector(".billede").src =
+    "billeder/" + sang.Billede + ".png";
+  singleView.querySelector(".sang").textContent = sang.Sang;
+  singleView.querySelector(".kunstner").textContent = sang.Kunstner;
+  // singleView.querySelector(".udgivelsesår").textContent = sang.Udgivelses år;
+  singleView.querySelector(".genre").textContent = sang.Genre;
+  singleView.querySelector(".fact").textContent = sang.Fact;
   singleView.style.display = "block";
-  singleView.querySelector("img").src = "/" + sang.billednavn + ".png";
-  singleView.querySelector("h2").textContent = sang.sang;
-  singleView.querySelector(".").textContent = sang.kunstner;
-  singleView.querySelector(".").textContent = sang.fact;
-
-  document
-    .querySelector(".luk")
-    .addEventListener("click", () => (singleView.style.display = "none"));
 }
+singleView.addEventListener("click", () => (singleView.style.display = "none"));
+
+// document
+//   .querySelector(".luk")
+//   .addEventListener("click", () => (singleView.style.display = "none"));

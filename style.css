@@ -159,7 +159,7 @@ html .forside {
 .splash {
   color: white;
   grid-column: 2/6;
-  grid-row: 3/4;
+  grid-row: 1;
 }
 .splash h1 {
   font-family: Teko;

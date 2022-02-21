@@ -148,7 +148,7 @@ html .forside {
 #firstsection {
   width: 100%;
   height: 100vh;
-  background-image: url(splash.svg);
+  background-image: url(billeder/splash.svg);
   background-color: #232427;
   background-size: cover;
   display: grid;

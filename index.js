@@ -71,7 +71,7 @@ function visEnkelSang(sang) {
 
   singleView.querySelector(".link").src = sang.Link;
 
-  // singleView.querySelector(".udgivelsesår").textContent = sang.Udgivelses år;
+  singleView.querySelector(".udgivelsesar").textContent = sang.Udgivelsesar;
   singleView.querySelector(".genre").textContent = sang.Genre;
   singleView.querySelector(".fact").textContent = sang.Fact;
   singleView.style.display = "block";

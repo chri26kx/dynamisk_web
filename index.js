@@ -49,34 +49,45 @@ function visSange() {
   sange.forEach((sang) => {
     if (filter == sang.Genre || filter == "alle") {
       const klon = template.cloneNode(true).content;
+
+      //
       klon.querySelector(".billede").src = "billeder/" + sang.Billede + ".png";
       klon.querySelector(".sang").textContent = sang.Sang;
       klon.querySelector(".kunstner").textContent = sang.Kunstner;
       klon.querySelector(".genre").textContent = sang.Genre;
+
+      // Gør hver enkel article element klikbart og ved klik -> Kalder funktionen visEnkelSang
       klon
         .querySelector("article")
         .addEventListener("click", () => visEnkelSang(sang));
+
+      //
       container.appendChild(klon);
     }
   });
 }
+
+// Definere variablen singleView
 const singleView = document.querySelector("#singleView");
+
+// Kør Funktionen visEnkelSang
 function visEnkelSang(sang) {
   console.log(sang);
-
+  // Tilføjer de forskellige elementer fra Jason som skal være på sinlgeView sektionen
   singleView.querySelector(".billede").src =
     "billeder/" + sang.Billede + ".png";
   singleView.querySelector(".sang").textContent = sang.Sang;
   singleView.querySelector(".kunstner").textContent = sang.Kunstner;
-
   singleView.querySelector(".link").src = sang.Link;
-
   singleView.querySelector(".udgivelsesar").textContent = sang.Udgivelsesar;
   singleView.querySelector(".genre").textContent = sang.Genre;
   singleView.querySelector(".fact").textContent = sang.Fact;
+
+  // Tilføjer 'display: "block"; til variablen singleView
   singleView.style.display = "block";
 }
 
+// Gør Luk knappen klikbar og ved klik -> tilføjes der i css 'display: "none";' til variablen singleView.
 document
   .querySelector(".luk")
   .addEventListener("click", () => (singleView.style.display = "none"));

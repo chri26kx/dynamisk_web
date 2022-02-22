@@ -37,11 +37,17 @@ async function hentData(url) {
 function filtrerSange() {
   console.log(this.dataset);
 
+  //Fjerner klassen vlagt, og tilføjer den til den valgte knap
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 
+  // Definerer f
   filter = this.dataset.kategori;
+
+  // Kald funktionen visSange
   visSange();
+
+  // Giver mainHeader teksten som den valgte knap
   mainHeader.textContent = this.textContent;
 }
 
@@ -49,6 +55,7 @@ function filtrerSange() {
 function visSange() {
   console.log("visSange");
 
+  // Definerer variabler
   const container = document.querySelector("#container");
   const template = document.querySelector("template");
 
@@ -58,13 +65,13 @@ function visSange() {
     if (filter == sang.Genre || filter == "alle") {
       const klon = template.cloneNode(true).content;
 
-      //
+      // Tilføjer elementer fra Jason
       klon.querySelector(".billede").src = "billeder/" + sang.Billede + ".png";
       klon.querySelector(".sang").textContent = sang.Sang;
       klon.querySelector(".kunstner").textContent = sang.Kunstner;
       klon.querySelector(".genre").textContent = sang.Genre;
 
-      // Gør hver enkel article element klikbart og ved klik -> Kalder funktionen visEnkelSang
+      // Tilføjer en EventListener der gør hver enkel article element klikbart og ved klik -> Kalder funktionen visEnkelSang
       klon
         .querySelector("article")
         .addEventListener("click", () => visEnkelSang(sang));
@@ -75,7 +82,7 @@ function visSange() {
   });
 }
 
-// Definere variablen singleView
+// Definerer variablen singleView
 const singleView = document.querySelector("#singleView");
 
 // Kør Funktionen visEnkelSang -> Tilføjer de forskellige elementer fra Jason som skal være på sinlgeView sektionen --> Tilføjer 'display: "block"; til variablen singleView

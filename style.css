@@ -340,7 +340,7 @@ button:hover {
 
 #singleView article {
   width: 45vh;
-  height: 60vh;
+  height: auto;
   margin: 7rem auto;
   border-radius: 4px;
   padding: 12px;

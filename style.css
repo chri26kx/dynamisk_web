@@ -276,6 +276,12 @@ button {
   text-decoration: none;
 }
 
+.mere {
+  border: #00a7ff solid 1px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
 button:hover {
   background-color: #00a7ff;
 }

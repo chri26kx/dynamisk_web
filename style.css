@@ -445,6 +445,10 @@ button:hover {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 5%;
+  /* boxshadow */
+  -moz-box-shadow: 0px 2px 5px 2px black;
+  -webkit-box-shadow: 0px 2px 5px 2px black;
+  box-shadow: 0px 2px 5px 2px black;
 }
 #singleView .kunstner {
   padding-bottom: 5%;
@@ -489,10 +493,6 @@ button:hover {
     /* object-fit: cover; */
     width: 70%;
     padding: 0%;
-    /* boxshadow */
-    -moz-box-shadow: 0px 2px 5px 2px black;
-    -webkit-box-shadow: 0px 2px 5px 2px black;
-    box-shadow: 0px 2px 5px 2px black;
   }
 
   #singleView .sang {

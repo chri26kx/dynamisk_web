@@ -506,12 +506,12 @@ button:hover {
   }
   #singleView .genre {
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 5/6;
     font-size: 1.2rem;
   }
   #singleView .udgivelsesar {
     grid-column: 2/3;
-    grid-row: 5/6;
+    grid-row: 4/5;
   }
 
   #singleView .fact {

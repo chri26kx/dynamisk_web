@@ -198,6 +198,15 @@ html .forside {
 html .side2 {
   background-color: #26272e;
 }
+
+.side2 nav button {
+  font-family: "Teko", sans-serif;
+}
+
+.genre {
+  font-size: 1rem;
+  padding-top: 5%;
+}
 hr {
   border: #00a7ff 0.5px solid;
   margin-inline: 5%;
@@ -291,6 +300,9 @@ button {
 
 button:hover {
   background-color: #00a7ff;
+  -moz-box-shadow: inset 0 0 5px black;
+  -webkit-box-shadow: inset 0 0 5px black;
+  box-shadow: inset 0 0 5px black;
 }
 @media (min-width: 600px) {
   h2 {
@@ -302,6 +314,10 @@ button:hover {
     justify-content: space-between;
     gap: 10px;
     text-align: center;
+  }
+
+  .side2 nav button {
+    font-size: 1.5rem;
   }
   .valgt {
     background-color: #26272e;

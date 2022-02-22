@@ -7,19 +7,25 @@ const options = {
 
 const mainHeader = document.querySelector("body h2");
 
+// Når DOMContent er loaded kald funktionen start
 document.addEventListener("DOMContentLoaded", start);
 let sange;
 let filter = "alle";
 
+// Definere en variabel for knapperne i nav, tilføjer en eventListener for hver enkel kanp, som ved klik kalder funktionen filtrerSange -- Kald funktionen hentData:
 function start() {
+  // Definere variabel filtrerKnapper
   const filtrerKnapper = document.querySelectorAll("nav button");
+
   filtrerKnapper.forEach((knap) =>
     knap.addEventListener("click", filtrerSange)
   );
 
+  // Kald funktionen hentData
   hentData(url);
 }
 
+// Venter på at dataen bliver hentet og laver den herefter om til jason -> kalder funktionen visSange
 async function hentData(url) {
   const respons = await fetch(url, options);
   sange = await respons.json();
@@ -27,6 +33,7 @@ async function hentData(url) {
   visSange();
 }
 
+//
 function filtrerSange() {
   console.log(this.dataset);
 
@@ -38,6 +45,7 @@ function filtrerSange() {
   mainHeader.textContent = this.textContent;
 }
 
+//
 function visSange() {
   console.log("visSange");
 
@@ -70,10 +78,10 @@ function visSange() {
 // Definere variablen singleView
 const singleView = document.querySelector("#singleView");
 
-// Kør Funktionen visEnkelSang
+// Kør Funktionen visEnkelSang -> Tilføjer de forskellige elementer fra Jason som skal være på sinlgeView sektionen --> Tilføjer 'display: "block"; til variablen singleView
 function visEnkelSang(sang) {
   console.log(sang);
-  // Tilføjer de forskellige elementer fra Jason som skal være på sinlgeView sektionen
+
   singleView.querySelector(".billede").src =
     "billeder/" + sang.Billede + ".png";
   singleView.querySelector(".sang").textContent = sang.Sang;
@@ -83,11 +91,11 @@ function visEnkelSang(sang) {
   singleView.querySelector(".genre").textContent = sang.Genre;
   singleView.querySelector(".fact").textContent = sang.Fact;
 
-  // Tilføjer 'display: "block"; til variablen singleView
+  // Tilføjer 'display: "block"; til variablen singleView - Gør singleView siden synlig
   singleView.style.display = "block";
 }
 
-// Gør Luk knappen klikbar og ved klik -> tilføjes der i css 'display: "none";' til variablen singleView.
+// Tilføjer en EventListener til classen luk, som gør at der ved klik  -> tilføjes i css 'display: "none";' til variablen singleView.
 document
   .querySelector(".luk")
   .addEventListener("click", () => (singleView.style.display = "none"));

@@ -106,3 +106,14 @@ function visEnkelSang(sang) {
 document
   .querySelector(".luk")
   .addEventListener("click", () => (singleView.style.display = "none"));
+
+//      MENU
+// Tilføjer EventListener til menu knappen og gør at ved klik så kalder den funktionen toggleMenu
+document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
+
+// Toggler klassen show på dropdown-elementer
+function toggleMenu() {
+  console.log("toggle");
+
+  document.querySelector(".dropdownElementer").classList.toggle("show");
+}

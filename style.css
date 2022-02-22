@@ -265,14 +265,18 @@ h2 {
   text-align: center;
   padding-block: 10%;
 }
-.side2 nav {
-  display: flex;
-  flex-flow: wrap;
-  gap: 20px;
-  text-align: center;
-  padding-inline: 5%;
-  margin-bottom: 5%;
+
+@media (min-width: 600px) {
+  .side2 nav {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    text-align: center;
+    padding-inline: 5%;
+    margin-bottom: 5%;
+  }
 }
+
 button {
   background-color: #26272e;
   /* border: #00a7ff solid 1px; */
@@ -344,6 +348,40 @@ button:hover {
 
   article .billede {
     padding-top: 5%;
+  }
+}
+
+/* ------------------------------------------ DropDown Menu ------------------------------------------- */
+
+.dropbtn {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .dropbtn {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 15px;
+  }
+
+  .dropdownElementer {
+    display: none;
+    position: absolute;
+  }
+
+  .dropdownElementer button {
+    display: block;
+    color: #ffffff;
+    padding: 0px 10px;
+    background-color: #3c3e49;
+    font-size: 1.5rem;
+  }
+
+  .show {
+    display: flex;
+    flex-flow: column;
+    /* flex-basis: 5px; */
+    justify-content: center;
   }
 }
 

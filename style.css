@@ -80,6 +80,7 @@ header {
   padding: 2%;
   padding-right: 15%;
   align-items: center;
+  max-height: 150px;
 }
 
 a {

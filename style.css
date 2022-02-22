@@ -144,23 +144,33 @@ nav a:hover {
 html .forside {
   background-color: #232427;
 }
+@media (min-width: 600px) {
+  #firstsection {
+    width: 100%;
+    height: 100vh;
+    background-image: url(billeder/splash.svg);
+    background-color: #232427;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
 
+  .splash {
+    color: white;
+    grid-column: 2/6;
+    grid-row: 1;
+  }
+}
 #firstsection {
   width: 100%;
   height: 100vh;
   background-image: url(billeder/splash.svg);
   background-color: #232427;
   background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  padding: 30px;
 }
 
-.splash {
-  color: white;
-  grid-column: 2/6;
-  grid-row: 1;
-}
 .splash h1 {
   font-family: Teko;
   font-size: 5rem;
@@ -181,7 +191,9 @@ html .forside {
   padding-inline: 5%;
   padding-block: 2%;
 }
-
+/* .splash {
+  text-align: center;
+} */
 /* ------------------------------------------ side 2 ------------------------------------------- */
 
 html .side2 {

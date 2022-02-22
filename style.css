@@ -84,6 +84,10 @@ header {
   position: fixed;
 }
 
+.side2 header {
+  position: relative;
+}
+
 a {
   text-decoration: none;
   font-family: "Bai Jamjuree", sans-serif;
@@ -134,7 +138,7 @@ nav a:hover {
     padding-block: 5%;
   }
   .logo img {
-    width: 13%;
+    width: 10%;
   }
 
   a {

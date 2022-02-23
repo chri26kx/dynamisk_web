@@ -526,7 +526,7 @@ button:hover {
     grid-column: 1/3;
     grid-row: 6/7;
     padding-inline: 8%;
-    padding: 0;
+    padding-top: 0;
   }
   #singleView .link {
     grid-column: 1/3;

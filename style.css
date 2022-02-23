@@ -23,7 +23,7 @@ h2 {
 
 h3 {
   font-family: "Teko", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
 }
 
@@ -179,17 +179,17 @@ html .forside {
 
 .splash a {
   border: solid 1.5px #00a7ff;
-  padding-inline: 5%;
+  padding-inline: 10%;
   padding-block: 2%;
   font-size: 1.5rem;
   /* innershadow */
-  -moz-box-shadow: inset 0 0 5px black;
-  -webkit-box-shadow: inset 0 0 5px black;
-  box-shadow: inset 0 0 5px black;
+  -moz-box-shadow: inset 0 0 10px black;
+  -webkit-box-shadow: inset 0 0 10px black;
+  box-shadow: inset 0 0 10px black;
 }
 .splash a:hover {
   background-color: #00a7ff;
-  padding-inline: 5%;
+  padding-inline: 10%;
   padding-block: 2%;
 }
 
@@ -318,18 +318,24 @@ button {
 
 .mere {
   border: #00a7ff solid 1px;
+  color: #00a7ff;
   margin-top: 10px;
   padding: 5px;
   grid-column: 4;
   grid-row: 2;
+  /* innershadow */
+  -moz-box-shadow: inset 0 0 5px black;
+  -webkit-box-shadow: inset 0 0 5px black;
+  box-shadow: inset 0 0 5px black;
 }
 
 button:hover {
   background-color: #00a7ff;
+  color: white;
 }
 
 .side2 nav button:hover {
-  /* innershadow */
+  /* innershadow*/
   -moz-box-shadow: inset 0 0 5px black;
   -webkit-box-shadow: inset 0 0 5px black;
   box-shadow: inset 0 0 5px black;
@@ -425,7 +431,7 @@ button:hover {
   width: 100vw;
   height: 100vh;
   background-color: #eff3ff56;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #singleView article {
@@ -450,6 +456,7 @@ button:hover {
   -webkit-box-shadow: 0px 2px 5px 2px black;
   box-shadow: 0px 2px 5px 2px black;
 }
+
 #singleView .kunstner {
   padding-bottom: 5%;
 }
@@ -473,8 +480,8 @@ button:hover {
 @media (min-width: 600px) {
   #singleView article {
     width: 150vh;
-    height: 100vh;
-    margin: 4rem auto;
+    height: 95vh;
+    margin: 1rem auto;
     border-radius: 4px;
     padding: 12px;
     background-color: #232427;
@@ -491,7 +498,7 @@ button:hover {
     grid-column: 1/2;
     grid-row: 2/4;
     /* object-fit: cover; */
-    width: 70%;
+    width: 65%;
     padding: 0%;
   }
 
@@ -508,6 +515,7 @@ button:hover {
     grid-column: 2/3;
     grid-row: 5/6;
     font-size: 1.2rem;
+    padding: 0;
   }
   #singleView .udgivelsesar {
     grid-column: 2/3;
@@ -518,6 +526,7 @@ button:hover {
     grid-column: 1/3;
     grid-row: 6/7;
     padding-inline: 8%;
+    padding: 0;
   }
   #singleView .link {
     grid-column: 1/3;

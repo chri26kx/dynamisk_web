@@ -53,7 +53,7 @@ function filterSange() {
 }
 
 // Hvis den valgte genre (se filter)
-// Tilføjer jason til template --> Lægger template ind som et child-element af #container
+// Tilføjer jason til template --> Lægges ind som et child-element af #container
 // Gør hver sang klikbar --> klik kald funktionen visEnkelSang
 function visSange() {
   console.log("visSange");
@@ -109,7 +109,7 @@ function visEnkelSang(sang) {
   singleView.style.display = "block";
 }
 
-// Tilføjer en EventListener til classen luk, som gør at der ved klik  -> tilføjes i css 'display: "none";' til variablen singleView.
+// Tilføjer en EventListener til klassen luk, som ved klik  -> tilføjes der i css 'display: "none";' til variablen singleView.
 document
   .querySelector(".luk")
   .addEventListener("click", () => (singleView.style.display = "none"));

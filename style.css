@@ -29,7 +29,7 @@ h3 {
 
 h4 {
   font-family: "Teko", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: white;
 }
 
@@ -234,6 +234,7 @@ hr {
 }
 
 article {
+  /* styling - farve, inner shadow, padding osv. */
   background-color: #232427;
   margin-bottom: 5%;
   padding-inline: 2%;
@@ -246,6 +247,7 @@ article {
 }
 @media (max-width: 600px) {
   article {
+    /* styling i grid i en liste form */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -305,6 +307,7 @@ button {
   color: white;
 }
 .valgt {
+  /* valgt i filter menu */
   background-color: #26272e;
   color: #00a7ff;
   border: #00a7ff solid 1px;
@@ -317,6 +320,7 @@ button {
 }
 
 .mere {
+  /* læs mere - knap */
   border: #00a7ff solid 1px;
   color: #00a7ff;
   margin-top: 10px;
@@ -364,6 +368,7 @@ button:hover {
   }
 
   #container {
+    /* desktop vises article i et grid med kolloner af 4 - data ligger sig under hinanden*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -381,12 +386,13 @@ button:hover {
 }
 
 /* ------------------------------------------ DropDown Menu ------------------------------------------- */
-
+/* dropdown knappen vises ikke */
 .dropbtn {
   display: none;
 }
 
 @media (max-width: 599px) {
+  /* brugermenuen vises i media query på under 599 px */
   .dropbtn {
     display: block;
     font-size: 1.5rem;
@@ -405,6 +411,7 @@ button:hover {
   }
 
   .dropdownElementer button {
+    /* brugermenu knapperne styling */
     display: block;
     color: #ffffff;
     padding: 0px 10px;
@@ -489,11 +496,12 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-
+  /* placering af luk-knap */
   #singleView .luk {
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  /* placering af billede */
   #singleView .billede {
     grid-column: 1/2;
     grid-row: 2/4;
@@ -501,32 +509,37 @@ button:hover {
     padding: 0%;
   }
 
+  /* placering af .sang */
   #singleView .sang {
     grid-column: 2/3;
     grid-row: 2/3;
   }
+  /* placering af .kunstner */
   #singleView .kunstner {
     grid-column: 2/3;
     grid-row: 3/4;
     font-size: 1.4rem;
   }
+  /* placering af .genre */
   #singleView .genre {
     grid-column: 2/3;
     grid-row: 5/6;
     font-size: 1.2rem;
     padding: 0;
   }
+  /* placering af .udgivelsesar */
   #singleView .udgivelsesar {
     grid-column: 2/3;
     grid-row: 4/5;
   }
-
+  /* placering af .fact */
   #singleView .fact {
     grid-column: 1/3;
     grid-row: 6/7;
     padding-inline: 8%;
     padding-top: 0;
   }
+  /* placering af .link */
   #singleView .link {
     grid-column: 1/3;
     grid-row: 7/8;

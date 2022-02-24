@@ -12,20 +12,19 @@ document.addEventListener("DOMContentLoaded", start);
 let sange;
 let filter = "alle";
 
-// Definere en variabel for knapperne i nav, tilføjer en eventListener for hver enkel kanp, som ved klik kalder funktionen filtrerSange -- Kald funktionen hentData:
+// Definere en variabel for knapperne i nav, tilføjer en eventListener for hver enkel kanp, som ved klik kalder funktionen filterSange
+// Kalder funktionen hentData:
 function start() {
-  // Definere variabel filtrerKnapper
-  const filtrerKnapper = document.querySelectorAll("nav button");
+  // Definere variabel filterKnapper
+  const filterKnapper = document.querySelectorAll("nav button");
 
-  filtrerKnapper.forEach((knap) =>
-    knap.addEventListener("click", filtrerSange)
-  );
+  filterKnapper.forEach((knap) => knap.addEventListener("click", filterSange));
 
   // Kald funktionen hentData
   hentData(url);
 }
 
-// Venter på at dataen bliver hentet og laver den herefter om til jason -> kalder funktionen visSange
+// Venter på at dataen bliver hentet -> kalder funktionen visSange
 async function hentData(url) {
   const respons = await fetch(url, options);
   sange = await respons.json();
@@ -33,15 +32,17 @@ async function hentData(url) {
   visSange();
 }
 
-//
-function filtrerSange() {
+// Tydeligøre hvilken knap der er valgt, definerer filter-variablen til at være den klikket knap
+// Giver ligeledes mainHeader den samme tekst som den klikket knap.
+// Kalder funktionen visSange
+function filterSange() {
   console.log(this.dataset);
 
-  //Fjerner klassen vlagt, og tilføjer den til den valgte knap
+  //Fjerner klassen valgt, og tilføjer den til den valgte knap ved at bruge "this"
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 
-  // Definerer f
+  // Definerer filter til at være den kategori som er valgt
   filter = this.dataset.kategori;
 
   // Kald funktionen visSange
@@ -51,7 +52,9 @@ function filtrerSange() {
   mainHeader.textContent = this.textContent;
 }
 
-//
+// Hvis den valgte genre (se filter)
+// Tilføjer jason til template --> Lægger template ind som et child-element af #container
+// Gør hver sang klikbar --> klik kald funktionen visEnkelSang
 function visSange() {
   console.log("visSange");
 
@@ -59,13 +62,16 @@ function visSange() {
   const container = document.querySelector("#container");
   const template = document.querySelector("template");
 
+  // Ryd container inden ny loop
   container.textContent = "";
 
+  // For hver sang:
   sange.forEach((sang) => {
+    // Tjek hvilken genre sangen har, sammenlign med aktuelt filter eller hvis filter har værdien "alle" så vis alle
     if (filter == sang.Genre || filter == "alle") {
       const klon = template.cloneNode(true).content;
 
-      // Tilføjer elementer fra Jason
+      // Tilføjer elementer fra Jason til template
       klon.querySelector(".billede").src = "billeder/" + sang.Billede + ".png";
       klon.querySelector(".sang").textContent = sang.Sang;
       klon.querySelector(".kunstner").textContent = sang.Kunstner;
@@ -76,7 +82,7 @@ function visSange() {
         .querySelector("article")
         .addEventListener("click", () => visEnkelSang(sang));
 
-      //
+      // Tilføjer variablen klon som child af variablen container
       container.appendChild(klon);
     }
   });
@@ -85,7 +91,8 @@ function visSange() {
 // Definerer variablen singleView
 const singleView = document.querySelector("#singleView");
 
-// Kør Funktionen visEnkelSang -> Tilføjer de forskellige elementer fra Jason som skal være på sinlgeView sektionen --> Tilføjer 'display: "block"; til variablen singleView
+// Kør Funktionen visEnkelSang -> Tilføjer de forskellige elementer fra Jason som skal være på sinlgeView sektionen
+// --> Tilføjer 'display: "block"; til variablen singleView
 function visEnkelSang(sang) {
   console.log(sang);
 
@@ -107,8 +114,8 @@ document
   .querySelector(".luk")
   .addEventListener("click", () => (singleView.style.display = "none"));
 
-//      MENU
-// Tilføjer EventListener til menu knappen og gør at ved klik så kalder den funktionen toggleMenu
+// **** MENU ****
+// Tilføjer EventListener til menu knappen og gør at ved et klik så kalder den funktionen toggleMenu
 document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
 
 // Toggler klassen show på dropdown-elementer

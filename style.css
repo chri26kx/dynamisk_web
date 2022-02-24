@@ -422,19 +422,19 @@ button:hover {
 }
 
 /* ------------------------------------------ popup ------------------------------------------- */
-
+/* mobile version */
 #singleView {
-  display: none;
-  position: fixed;
+  display: none; /*vinduet er lukket*/
+  position: fixed; /*ligger sig ovenpå sidens indhold*/
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #eff3ff56;
-  /* overflow: scroll; */
+  background-color: #eff3ff56; /*lysere baggrund så siden bagved ikke er i fokus*/
 }
 
 #singleView article {
+  /* styling af articlens data i popup */
   width: 45vh;
   height: auto;
   margin: 4rem auto;
@@ -447,6 +447,7 @@ button:hover {
 }
 
 #singleView img {
+  /* styling af billedet i popup */
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -460,9 +461,6 @@ button:hover {
 #singleView .kunstner {
   padding-bottom: 5%;
 }
-/* #singleView p {
-  padding-bottom: 2%;
-} */
 
 #singleView .fact {
   padding-top: 5%;
@@ -478,7 +476,9 @@ button:hover {
   color: #00a7ff;
 }
 @media (min-width: 600px) {
+  /* desktop version */
   #singleView article {
+    /* styling af articlens data i popup */
     width: 150vh;
     height: 95vh;
     margin: 1rem auto;
@@ -497,7 +497,6 @@ button:hover {
   #singleView .billede {
     grid-column: 1/2;
     grid-row: 2/4;
-    /* object-fit: cover; */
     width: 65%;
     padding: 0%;
   }
